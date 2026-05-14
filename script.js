@@ -236,37 +236,5 @@ if (form) {
 
 
 // ── PARALLAX HERO PILLS on mousemove ──────────────────────
-const pills = document.querySelectorAll('.float-pill');
+// Contact CTA buttons handled via native links (no JS needed)
 document.addEventListener('mousemove', e => {
-  const xp = (e.clientX / window.innerWidth  - 0.5);
-  const yp = (e.clientY / window.innerHeight - 0.5);
-  pills.forEach((pill, i) => {
-    const s = (i + 1) * 10;
-    pill.style.transform = `translateY(calc(-14px * ${i % 2 === 0 ? 1 : -1})) translate(${xp * s * 0.3}px, ${yp * s * 0.3}px)`;
-  });
-});
-
-
-// ── HEADLINE REVEAL on load ────────────────────────────────
-window.addEventListener('load', () => {
-  const lines = document.querySelectorAll('.headline-line');
-  lines.forEach((line, i) => {
-    line.style.opacity   = '0';
-    line.style.transform = 'translateY(40px)';
-    setTimeout(() => {
-      line.style.transition = `opacity .8s ease ${i * 0.15}s, transform .8s cubic-bezier(.34,1.56,.64,1) ${i * 0.15}s`;
-      line.style.opacity   = '1';
-      line.style.transform = 'translateY(0)';
-    }, 100);
-  });
-});
-
-
-// ── HAMBURGER ─────────────────────────────────────────────
-const hamburger = document.getElementById('nav-hamburger');
-if (hamburger) {
-  hamburger.addEventListener('click', () => {
-    const open = document.body.classList.toggle('nav-open');
-    hamburger.setAttribute('aria-expanded', open);
-  });
-}
