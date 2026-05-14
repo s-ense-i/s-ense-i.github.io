@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Ziad Bassam — Fullstack Developer</title>
+  <meta name="description" content="Ziad Bassam (MOSH) — Fullstack Developer. Spring Boot, React, Node.js, Docker, Microservices."/>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<header id="site-header" class="site-header">
+  <nav class="nav-container">
+    <a href="#hero" class="nav-brand" id="nav-brand">MOSH<span class="brand-dot">.</span></a>
+    <div class="nav-center">
+      <ul class="nav-links">
+        <li><a href="#hero"     class="nav-link active" data-section="hero">Home</a></li>
+        <li><a href="#about"    class="nav-link" data-section="about">About</a></li>
+        <li><a href="#skills"   class="nav-link" data-section="skills">Skills</a></li>
+        <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+        <li><a href="#contact"  class="nav-link" data-section="contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="nav-right">
+      <a href="https://github.com/s-ense-i" target="_blank" class="nav-login" id="nav-gh-login">GitHub</a>
+      <a href="#contact" class="nav-cta-btn" id="nav-cta">Hire Me</a>
+    </div>
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<!-- ── HERO ── -->
+<section id="hero" class="hero-section">
+  <div class="hero-inner">
+    <div class="hero-badge" data-reveal="up" data-delay="0">
+      <span class="badge-pulse"></span>
+      Available for work
+    </div>
+    <h1 class="hero-headline" data-reveal="up" data-delay="0.1">
+      <span class="headline-line">Build things</span>
+      <span class="headline-line headline-accent">That Matter.</span>
+    </h1>
+    <p class="hero-sub" data-reveal="up" data-delay="0.25">
+      Fullstack developer crafting robust backends &amp; beautiful frontends.<br/>
+      From microservices to pixel‑perfect UIs — I do it all.
+    </p>
+    <div class="hero-actions" data-reveal="up" data-delay="0.35">
+      <a href="#projects" class="btn-primary-lg" id="hero-work-btn">View My Work</a>
+      <a href="#contact"  class="btn-ghost-lg"   id="hero-contact-btn">Get in touch →</a>
+    </div>
+    <div class="hero-scroll-hint" data-reveal="up" data-delay="0.5">
+      <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+      <span>Scroll to explore</span>
+    </div>
+  </div>
+
+  <!-- Floating tech pills -->
+  <div class="hero-float-pills">
+    <div class="float-pill fp1" data-reveal="scale" data-delay="0.4">🌸 Spring Boot</div>
+    <div class="float-pill fp2" data-reveal="scale" data-delay="0.5">⚛️ React</div>
+    <div class="float-pill fp6" data-reveal="scale" data-delay="0.7">🐳 Docker</div>
+    <div class="float-pill fp7" data-reveal="scale" data-delay="0.85">⚡ Node.js</div>
+  </div>
+</section>
+
+<!-- ── MARQUEE ── -->
+<div class="marquee-wrap" aria-hidden="true">
+  <div class="marquee-track">
+    <span class="mq-item">Spring Boot</span><span class="mq-sep">★</span>
+    <span class="mq-item">React</span><span class="mq-sep">★</span>
+    <span class="mq-item">Node.js</span><span class="mq-sep">★</span>
+    <span class="mq-item">Docker</span><span class="mq-sep">★</span>
+    <span class="mq-item">Microservices</span><span class="mq-sep">★</span>
+    <span class="mq-item">PostgreSQL</span><span class="mq-sep">★</span>
+    <span class="mq-item">TypeScript</span><span class="mq-sep">★</span>
+    <span class="mq-item">Java</span><span class="mq-sep">★</span>
+    <span class="mq-item">REST API</span><span class="mq-sep">★</span>
+    <span class="mq-item">Spring Boot</span><span class="mq-sep">★</span>
+    <span class="mq-item">React</span><span class="mq-sep">★</span>
+    <span class="mq-item">Node.js</span><span class="mq-sep">★</span>
+    <span class="mq-item">Docker</span><span class="mq-sep">★</span>
+    <span class="mq-item">Microservices</span><span class="mq-sep">★</span>
+    <span class="mq-item">PostgreSQL</span><span class="mq-sep">★</span>
+    <span class="mq-item">TypeScript</span><span class="mq-sep">★</span>
+    <span class="mq-item">Java</span><span class="mq-sep">★</span>
+    <span class="mq-item">REST API</span><span class="mq-sep">★</span>
+  </div>
+</div>
+
+<!-- ── ABOUT ── -->
+<section id="about" class="about-section">
+  <div class="section-inner">
+    <div class="section-label" data-reveal="up">About me</div>
+    <div class="about-grid">
+      <div class="about-text">
+        <h2 class="section-heading" data-reveal="up" data-delay="0.05">
+          Building things that <em>work</em> &amp; <em>feel right</em>
+        </h2>
+        <p class="about-para" data-reveal="up" data-delay="0.1">
+          Hey, I'm Ziad — a fullstack developer who loves the whole stack, from designing
+          microservices architectures to crafting smooth UI experiences. I approach every
+          project with one goal: <strong>make it solid, make it elegant.</strong>
+        </p>
+        <p class="about-para" data-reveal="up" data-delay="0.15">
+          My toolkit spans Java/Spring Boot on the backend, React on the frontend,
+          Node.js for server‑side logic, and Docker + microservices for scalable deployments.
+        </p>
+        <div class="about-stats" data-reveal="up" data-delay="0.2">
+          <div class="stat-item">
+            <span class="stat-number">5+</span>
+            <span class="stat-desc">Repos on GitHub</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number">Full</span>
+            <span class="stat-desc">Stack Coverage</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number">∞</span>
+            <span class="stat-desc">Coffee consumed</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-card-wrap" data-reveal="right" data-delay="0.1">
+        <div class="about-visual-card">
+          <div class="avc-header">
+            <div class="avc-dots">
+              <span class="avc-dot avc-r"></span>
+              <span class="avc-dot avc-y"></span>
+              <span class="avc-dot avc-g"></span>
+            </div>
+            <span class="avc-title">ziad@portfolio ~ </span>
+          </div>
+          <div class="avc-body">
+            <p><span class="t-prompt">$</span> <span class="t-cmd">whoami</span></p>
+            <p class="t-out">ziad-bassam (mosh) — fullstack dev</p>
+            <p><span class="t-prompt">$</span> <span class="t-cmd">cat skills.json</span></p>
+            <p class="t-out">{</p>
+            <p class="t-out">&nbsp;&nbsp;"backend": ["Java", "Spring Boot", "Node.js"],</p>
+            <p class="t-out">&nbsp;&nbsp;"frontend": ["React", "TypeScript", "CSS"],</p>
+            <p class="t-out">&nbsp;&nbsp;"devops": ["Docker", "GitHub", "CI/CD"]</p>
+            <p class="t-out">}</p>
+            <p><span class="t-prompt">$</span> <span class="t-cursor">█</span></p>
+          </div>
+          <div class="avc-glow"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SKILLS ── -->
+<section id="skills" class="skills-section">
+  <div class="section-inner">
+    <div class="section-label text-center" data-reveal="up">Tech Stack</div>
+    <h2 class="section-heading text-center" data-reveal="up" data-delay="0.05">
+      What I <em>work with</em>
+    </h2>
+    <div class="skills-bento" data-reveal="up" data-delay="0.1">
+
+      <div class="skill-bento-card bento-large" data-reveal="up" data-delay="0">
+        <div class="sbc-icon">⚙️</div>
+        <h3 class="sbc-title">Backend</h3>
+        <p class="sbc-desc">Building APIs and services that scale</p>
+        <div class="sbc-skills">
+          <div class="sbc-skill" data-level="90"><span>Spring Boot / Java</span><div class="sbc-bar"><div class="sbc-fill"></div></div></div>
+          <div class="sbc-skill" data-level="80"><span>Node.js</span><div class="sbc-bar"><div class="sbc-fill"></div></div></div>
+          <div class="sbc-skill" data-level="75"><span>Microservices</span><div class="sbc-bar"><div class="sbc-fill"></div></div></div>
+        </div>
+        <div class="sbc-accent sbc-accent-purple"></div>
+      </div>
+
+      <div class="skill-bento-card" data-reveal="up" data-delay="0.08">
+        <div class="sbc-icon">🎨</div>
+        <h3 class="sbc-title">Frontend</h3>
+        <p class="sbc-desc">Pixel-perfect UIs</p>
+        <div class="sbc-skills">
+          <div class="sbc-skill" data-level="85"><span>React</span><div class="sbc-bar"><div class="sbc-fill"></div></div></div>
+          <div class="sbc-skill" data-level="88"><span>JavaScript / TS</span><div class="sbc-bar"><div class="sbc-fill"></div></div></div>
+          <div class="sbc-skill" data-level="70"><span>CSS / UI</span><div class="sbc-bar"><div class="sbc-fill"></div></div></div>
+        </div>
+        <div class="sbc-accent sbc-accent-blue"></div>
+      </div>
+
+      <div class="skill-bento-card" data-reveal="up" data-delay="0.16">
+        <div class="sbc-icon">🐳</div>
+        <h3 class="sbc-title">DevOps</h3>
+        <p class="sbc-desc">Ship fast, scale smart</p>
+        <div class="sbc-skills">
+          <div class="sbc-skill" data-level="82"><span>Docker</span><div class="sbc-bar"><div class="sbc-fill"></div></div></div>
+          <div class="sbc-skill" data-level="88"><span>GitHub</span><div class="sbc-bar"><div class="sbc-fill"></div></div></div>
+          <div class="sbc-skill" data-level="72"><span>CI/CD</span><div class="sbc-bar"><div class="sbc-fill"></div></div></div>
+        </div>
+        <div class="sbc-accent sbc-accent-green"></div>
+      </div>
+
+    </div>
+
+    <div class="tech-tags" data-reveal="up" data-delay="0.2">
+      <span class="tech-tag">Java</span>
+      <span class="tech-tag">Spring Boot</span>
+      <span class="tech-tag">React</span>
+      <span class="tech-tag">Node.js</span>
+      <span class="tech-tag">JavaScript</span>
+      <span class="tech-tag">Docker</span>
+      <span class="tech-tag">Microservices</span>
+      <span class="tech-tag">GitHub</span>
+      <span class="tech-tag">REST API</span>
+      <span class="tech-tag">PostgreSQL</span>
+      <span class="tech-tag">TypeScript</span>
+      <span class="tech-tag">Git</span>
+    </div>
+  </div>
+</section>
+
+<!-- ── PROJECTS ── -->
+<section id="projects" class="projects-section">
+  <div class="section-inner">
+    <div class="section-label text-center" data-reveal="up">What I've built</div>
+    <h2 class="section-heading text-center" data-reveal="up" data-delay="0.05">
+      Featured <em>Projects</em>
+    </h2>
+
+    <div class="projects-stack">
+
+      <!-- Project Card 1 -->
+      <div class="project-big-card" data-reveal="up" data-delay="0">
+        <div class="pbc-visual" style="background-image:url('card_bg_1.png')">
+          <div class="pbc-overlay"></div>
+          <div class="pbc-number">01</div>
+        </div>
+        <div class="pbc-content">
+          <div class="pbc-tags">
+            <span class="pbc-tag">Spring Boot</span>
+            <span class="pbc-tag">React</span>
+            <span class="pbc-tag">Docker</span>
+          </div>
+          <h3 class="pbc-title">IT Asset Tracking &amp; Management System</h3>
+          <p class="pbc-desc">
+            IT Asset Tracking &amp; Management System is a role-based web application for
+            managing IT assets, assignments, maintenance tickets, notifications, and audit
+            reports in one place. It helps organizations track the full asset lifecycle from
+            procurement to retirement with a clean, modern interface.
+          </p>
+          <div class="pbc-actions">
+            <a href="https://asset-tracking-system1.netlify.app/#/login" target="_blank" class="pbc-btn pbc-btn-solid" id="p1-live">Live Demo ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project Card 2 -->
+      <div class="project-big-card pbc-reverse" data-reveal="up" data-delay="0.1">
+        <div class="pbc-visual" style="background-image:url('card_bg_2.png')">
+          <div class="pbc-overlay"></div>
+          <div class="pbc-number">02</div>
+        </div>
+        <div class="pbc-content">
+          <div class="pbc-tags">
+            <span class="pbc-tag">React</span>
+            <span class="pbc-tag">Spring Boot</span>
+            <span class="pbc-tag">OpenRouter</span>
+          </div>
+          <h3 class="pbc-title">FlowDesk Project Manager</h3>
+          <p class="pbc-desc">
+            Full-stack AI-powered project management platform — built with React, Spring Boot,
+            and OpenRouter — featuring role-based access control, real-time notifications,
+            and an embedded AI assistant that knows your entire project context.
+          </p>
+          <div class="pbc-actions">
+            <a href="https://flowdeskapp1.netlify.app" target="_blank" class="pbc-btn pbc-btn-solid" id="p2-live">Live Demo ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project Card 3 -->
+      <div class="project-big-card" data-reveal="up" data-delay="0.2">
+        <div class="pbc-visual" style="background-image:url('card_bg_3.png')">
+          <div class="pbc-overlay"></div>
+          <div class="pbc-number">03</div>
+        </div>
+        <div class="pbc-content">
+          <div class="pbc-tags">
+            <span class="pbc-tag">React</span>
+            <span class="pbc-tag">Vite</span>
+            <span class="pbc-tag">Frontend</span>
+          </div>
+          <h3 class="pbc-title">Eventshub</h3>
+          <p class="pbc-desc">
+            A modern, role-driven React + Vite frontend for event discovery and management.
+            It provides organizer, participant, and admin interfaces with features like event
+            listing and detail pages, create/edit flows, ticket management, favorites, user
+            profiles, analytics, and admin approval workflows.
+          </p>
+          <div class="pbc-actions">
+            <a href="https://eventsh.netlify.app" target="_blank" class="pbc-btn pbc-btn-solid" id="p3-live">Live Demo ↗</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="projects-footer-cta" data-reveal="up" data-delay="0.25">
+      <a href="https://github.com/s-ense-i" target="_blank" class="btn-ghost-lg" id="all-projects-btn">
+        See all projects on GitHub →
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTACT ── -->
+<section id="contact" class="contact-section">
+  <div class="section-inner">
+    <div class="section-label text-center" data-reveal="up">Let's connect</div>
+    <h2 class="section-heading text-center" data-reveal="up" data-delay="0.05">
+      Get In <em>Touch</em>
+    </h2>
+    <p class="contact-sub" data-reveal="up" data-delay="0.1">
+      Have a project in mind or just want to say hi? My inbox is always open.
+    </p>
+
+    <div class="contact-grid">
+      <div class="contact-info-col" data-reveal="left" data-delay="0.1">
+        <a href="https://github.com/s-ense-i" target="_blank" class="contact-row" id="contact-github-link">
+          <div class="cr-icon cr-icon-gh">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          </div>
+          <div class="cr-text">
+            <span class="cr-label">GitHub</span>
+            <span class="cr-value">s-ense-i</span>
+          </div>
+          <span class="cr-arrow">↗</span>
+        </a>
+        <a href="mailto:ziad@example.com" class="contact-row" id="contact-email-link">
+          <div class="cr-icon cr-icon-email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div class="cr-text">
+            <span class="cr-label">Email</span>
+            <span class="cr-value">Drop me a line</span>
+          </div>
+          <span class="cr-arrow">↗</span>
+        </a>
+        <div class="contact-card-deco">
+          <div class="ccd-shape ccd-s1"></div>
+          <div class="ccd-shape ccd-s2"></div>
+        </div>
+      </div>
+
+      <div class="contact-form-wrap" data-reveal="right" data-delay="0.15">
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="inp-name">Your name</label>
+              <input type="text" id="inp-name" name="name" placeholder="Jane Doe" autocomplete="off"/>
+            </div>
+            <div class="form-group">
+              <label for="inp-email">Your email</label>
+              <input type="email" id="inp-email" name="email" placeholder="jane@example.com" autocomplete="off"/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inp-msg">Message</label>
+            <textarea id="inp-msg" name="message" rows="5" placeholder="Hey Ziad, let's build something together..."></textarea>
+          </div>
+          <button type="submit" class="btn-primary-lg form-submit" id="send-btn">Send Message →</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FLOATING PILL NAV (appears on scroll) ── -->
+<nav class="nav-float-pill" id="nav-float-pill" aria-label="Floating navigation">
+  <ul>
+    <li><a href="#hero"     class="nav-link" data-section="hero">Home</a></li>
+    <li><a href="#about"    class="nav-link" data-section="about">About</a></li>
+    <li><a href="#skills"   class="nav-link" data-section="skills">Skills</a></li>
+    <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+    <li><a href="#contact"  class="nav-link" data-section="contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ── FOOTER ── -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span class="footer-brand">Ziad Bassam <span class="footer-dot">·</span> MOSH</span>
+    <span class="footer-copy">Crafted with vanilla code · 2025</span>
+    <a href="https://github.com/s-ense-i" target="_blank" class="footer-link" id="footer-gh-link">GitHub ↗</a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
