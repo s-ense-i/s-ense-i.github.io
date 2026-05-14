@@ -238,3 +238,16 @@ if (form) {
 // ── PARALLAX HERO PILLS on mousemove ──────────────────────
 // Contact CTA buttons handled via native links (no JS needed)
 document.addEventListener('mousemove', e => {
+  const hero = document.querySelector('.hero-section');
+  if (!hero) return;
+  const r = hero.getBoundingClientRect();
+  const cx = ((e.clientX - r.left) / r.width) - 0.5;
+  const cy = ((e.clientY - r.top)  / r.height) - 0.5;
+
+  document.querySelectorAll('.float-pill').forEach((p, i) => {
+    const depth = 8 + (i % 3) * 6;
+    const tx = Math.round(cx * depth);
+    const ty = Math.round(cy * depth);
+    p.style.transform = `translate3d(${tx}px, ${ty}px, 0)`;
+  });
+});
