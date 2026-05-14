@@ -141,19 +141,96 @@ if (tagsWrap) tagObs.observe(tagsWrap);
 
 
 // ── CONTACT FORM ───────────────────────────────────────────
+// Initialize EmailJS
+emailjs.init('fMXTTiEfH8l_vJN5_');
+
+// Rate limiting: Track submission times
+const submissionTimes = [];
+const RATE_LIMIT_SECONDS = 5; // Min 5 seconds between submissions
+const MAX_SUBMISSIONS_PER_HOUR = 10; // Max 10 emails per hour
+
+function checkRateLimit() {
+  const now = Date.now();
+  const oneHourAgo = now - (60 * 60 * 1000);
+  
+  // Remove old entries
+  submissionTimes.length = 0;
+  
+  // Check last submission (min 5 seconds)
+  if (submissionTimes.length > 0) {
+    const lastSubmission = submissionTimes[submissionTimes.length - 1];
+    if ((now - lastSubmission) < (RATE_LIMIT_SECONDS * 1000)) {
+      return { allowed: false, reason: `Please wait ${Math.ceil((RATE_LIMIT_SECONDS * 1000 - (now - lastSubmission)) / 1000)}s before submitting again` };
+    }
+  }
+  
+  // Check hourly limit
+  const recentSubmissions = submissionTimes.filter(time => time > oneHourAgo);
+  if (recentSubmissions.length >= MAX_SUBMISSIONS_PER_HOUR) {
+    return { allowed: false, reason: 'Too many submissions. Please try again later.' };
+  }
+  
+  return { allowed: true };
+}
+
 const form = document.getElementById('contact-form');
 if (form) {
-  form.addEventListener('submit', e => {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
-    const btn  = form.querySelector('button[type="submit"]');
-    const orig = btn.textContent;
-    btn.textContent = 'Sent! ✓';
-    btn.style.background = '#10b981';
-    setTimeout(() => {
-      btn.textContent = orig;
-      btn.style.background = '';
-      form.reset();
-    }, 3000);
+    
+    const btn = form.querySelector('button[type="submit"]');
+    const statusDiv = document.getElementById('form-status');
+    const origText = btn.textContent;
+    
+    // Validate form
+    if (!form.checkValidity()) {
+      statusDiv.textContent = '❌ Please fill in all fields correctly';
+      statusDiv.style.color = '#ef4444';
+      return;
+    }
+    
+    // Check rate limit
+    const rateCheck = checkRateLimit();
+    if (!rateCheck.allowed) {
+      statusDiv.textContent = `⏱️ ${rateCheck.reason}`;
+      statusDiv.style.color = '#f97316';
+      return;
+    }
+    
+    // Disable button
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+    statusDiv.textContent = '';
+    
+    try {
+      // Send email using EmailJS
+      await emailjs.sendForm('service_13il0gn', 'template_mrwc2wa', form);
+      
+      // Success
+      btn.textContent = 'Sent! ✓';
+      btn.style.background = '#10b981';
+      statusDiv.textContent = '✅ Message sent successfully!';
+      statusDiv.style.color = '#10b981';
+      
+      // Record submission time for rate limiting
+      submissionTimes.push(Date.now());
+      
+      // Reset form
+      setTimeout(() => {
+        form.reset();
+        btn.textContent = origText;
+        btn.style.background = '';
+        btn.disabled = false;
+        statusDiv.textContent = '';
+      }, 3000);
+      
+    } catch (error) {
+      console.error('Email error:', error);
+      btn.textContent = origText;
+      btn.disabled = false;
+      statusDiv.textContent = '❌ Failed to send. Please try again or email directly.';
+      statusDiv.style.color = '#ef4444';
+    }
   });
 }
 

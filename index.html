@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css"/>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/index.min.js"></script>
 </head>
 <body>
 
@@ -338,7 +339,7 @@
           </div>
           <span class="cr-arrow">↗</span>
         </a>
-        <a href="mailto:ziad@example.com" class="contact-row" id="contact-email-link">
+        <a href="mailto:ziadbassam579@gmail.com" class="contact-row" id="contact-email-link">
           <div class="cr-icon cr-icon-email">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
           </div>
@@ -356,20 +357,22 @@
 
       <div class="contact-form-wrap" data-reveal="right" data-delay="0.15">
         <form class="contact-form" id="contact-form" novalidate>
+          <input type="hidden" name="to_email" value="ziadbassam579@gmail.com"/>
           <div class="form-row">
             <div class="form-group">
               <label for="inp-name">Your name</label>
-              <input type="text" id="inp-name" name="name" placeholder="Jane Doe" autocomplete="off"/>
+              <input type="text" id="inp-name" name="from_name" placeholder="Jane Doe" autocomplete="off" required/>
             </div>
             <div class="form-group">
               <label for="inp-email">Your email</label>
-              <input type="email" id="inp-email" name="email" placeholder="jane@example.com" autocomplete="off"/>
+              <input type="email" id="inp-email" name="from_email" placeholder="jane@example.com" autocomplete="off" required/>
             </div>
           </div>
           <div class="form-group">
             <label for="inp-msg">Message</label>
-            <textarea id="inp-msg" name="message" rows="5" placeholder="Hey Ziad, let's build something together..."></textarea>
+            <textarea id="inp-msg" name="message" rows="5" placeholder="Hey Ziad, let's build something together..." required></textarea>
           </div>
+          <div id="form-status" class="form-status"></div>
           <button type="submit" class="btn-primary-lg form-submit" id="send-btn">Send Message →</button>
         </form>
       </div>
